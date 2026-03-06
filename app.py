@@ -7,7 +7,7 @@ DB = "database.db"
 @app.route("/")
 def hello():
     try: sqlite3.connect(DB); return "hello world"
-    except sqlite3.Error: return "Errore DB distruggiamo tutto"
+    except sqlite3.Error: return "Errore DB"
 
 @pytest.fixture
 def client(): yield app.test_client()
